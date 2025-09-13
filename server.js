@@ -11,7 +11,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connexion à MongoDB
-mongoose.connect('mongodb://localhost:27017/gestion-retours', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/gestion-retours';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie!'))
   .catch(err => console.error('Erreur de connexion:', err));
 
