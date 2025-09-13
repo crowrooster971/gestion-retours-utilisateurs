@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json()); // Updated to use express.json() instead of body-parser
 
-// Connexion à MongoDB
+// Connection to MongoDB
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/gestion-retours';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie!'))
