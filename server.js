@@ -1,14 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json()); // Updated to use express.json() instead of body-parser
 
 // Connexion à MongoDB
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/gestion-retours';
