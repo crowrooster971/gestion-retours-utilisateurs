@@ -8,10 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.18.2",
+    "express": "^4.18.3",
     "mongoose": "^5.12.3",
-    "cors": "^2.8.5",
-    "body-parser": "^1.19.0"
+    "cors": "^2.8.5"
   },
   "repository": {
     "type": "git",
