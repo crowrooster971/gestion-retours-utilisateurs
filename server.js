@@ -18,7 +18,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('Bienvenue sur l API de Gestion des Retours Utilisateurs');
+  res.send('Bienvenue sur l\u0027API de Gestion des Retours Utilisateurs');
 });
 
 app.listen(PORT, () => {
