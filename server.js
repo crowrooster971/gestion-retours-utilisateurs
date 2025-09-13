@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
   res.send('Bienvenue sur l\'API de Gestion des Retours Utilisateurs');
 });
 
+// Health check route
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK' });
+});
+
 app.listen(PORT, () => {
   console.log(`Serveur en écoute sur le port ${PORT}`);
 });
